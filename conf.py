@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 BASE_DIR = Path(__file__).resolve().parent
-CONFIG = dotenv_values(os.path.join(BASE_DIR, '.env.prod'))
+CONFIG = dotenv_values(os.path.join(BASE_DIR, '.env'))
 
 formatter = logging.Formatter('[%(asctime)s] [%(module)s]- [%(levelname)s] - [%(funcName)s: %(lineno)d] - %(message)s')
 handler = TimedRotatingFileHandler(
