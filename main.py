@@ -36,7 +36,7 @@ def voice_message(message:telebot.types.Message):
     if author:
         result = f'<b>{author}</b>:\n{result}'
     if not is_follower:
-        result += f'\n<i>created by: {CONFIG["OWNER_CHANNEL_LINK"]}</i>'
+        result += f'\n<i>by {CONFIG["OWNER_CHANNEL_LINK"]}</i>'
     bot.send_message(message.chat.id, text=result, parse_mode='html')
     os.remove(file_name)
 
